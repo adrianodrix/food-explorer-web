@@ -23,7 +23,7 @@ export function SignUp() {
 
                 <div className="InputWrapper">
                     <label htmlFor="email">Email</label>
-                    <Input type='email' placeholder='my_best@email.com' icon={ CiMail } name='email' id='email' required />
+                    <Input type='email' placeholder='your_best@email.com' icon={ CiMail } name='email' id='email' required />
                 </div>
 
                 <div className="InputWrapper">

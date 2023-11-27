@@ -1,8 +1,28 @@
+import { useState } from "react";
+import { Footer } from "../../components/Footer"
+import { Header } from "../../components/Header"
+import { SideMenu } from "../../components/SideMenu"
+
+import { Container, Content } from "./styles"
+
 export function Home() {
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
+  
   return (
-    <>
-    <h1>Food Explorer</h1>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores magni provident, commodi assumenda quia omnis optio illo minus facere enim maxime, tempora nobis autem, doloribus ratione porro distinctio explicabo ipsam?</p>
-    </>
+    <Container>
+      <Header 
+        onOpenMenu={() => setMenuIsOpen(true)} 
+      />
+      
+      <SideMenu  
+        menuIsOpen={menuIsOpen}
+        onCloseMenu={() => setMenuIsOpen(false)}
+      />
+      
+      <Content>
+        <h1>Main</h1>
+      </Content>
+      <Footer />
+    </Container>
   )
 }
