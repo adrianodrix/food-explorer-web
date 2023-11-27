@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { DEVICE_BREAKPOINTS } from "./deviceBreakpoints";
 
 export default createGlobalStyle`
     * {
@@ -7,6 +8,14 @@ export default createGlobalStyle`
         box-sizing: border-box;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+    }
+
+    :root {
+        font-size: 1rem;
+
+        @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+           // font-size: .875rem;
+        }
     }
 
     body {
@@ -56,6 +65,7 @@ export default createGlobalStyle`
 
     a {
         text-decoration: none;
+        color: ${({ theme }) => theme.LIGHT[100]};
     }
 
     button, a {
