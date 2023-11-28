@@ -8,7 +8,7 @@ export const Container = styled.aside`
     position: absolute;
     z-index: 1;
     width: 100%;
-    height: calc(100vh - 8rem);
+    height: calc(100vh - 4.8rem);
 
     transform: translateX(-100%);
     transition: transform 0.4s ease-in-out;
@@ -25,7 +25,7 @@ export const Container = styled.aside`
         display: flex;
         align-items: center;
         gap: 1rem;
-        height: 8rem;
+        height: 7.1rem;
         padding-left: 2rem;
     }
 

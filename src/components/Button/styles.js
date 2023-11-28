@@ -5,6 +5,12 @@ export const Container = styled.button`
     background-color: ${({ theme }) => theme.TINTS.TOMATO[100]};
     color: ${({ theme }) => theme.LIGHT[100]};
 
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+
     min-height: 3.5rem;
     border: none;
     padding: 0 1rem;

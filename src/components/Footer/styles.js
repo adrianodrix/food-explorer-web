@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.footer`
     grid-area: footer;
     width: 100%;
-    height: 7.7rem;
+    height: 4.8rem;
 
     display:  flex;
     align-items: center;
@@ -23,11 +23,11 @@ export const Container = styled.footer`
     > div {
         > h1 {
             color: ${({ theme }) => theme.LIGHT[700]};
-            font-size: 1rem;
+            font-size: .95rem;
         }
 
         > img {
-            width: 32px;
+            width: 1rem;
             filter: grayscale();
         }
     }
