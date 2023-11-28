@@ -25,17 +25,9 @@ export const Content = styled.div`
         }
     }
 
-    .salesBtn {
-        display: none;
-    }
-
+    
     @media (min-width: ${DEVICE_BREAKPOINTS.MD}) {
         max-width: 71.5rem;
-
-        .salesBtn {
-            display: block;
-            width: 13.5rem;
-        }
     }
 `
 
