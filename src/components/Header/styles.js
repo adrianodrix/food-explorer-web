@@ -3,7 +3,12 @@ import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
 
 export const Container = styled.header`
     grid-area: header;
+    position: fixed;
+    
     width: 100%;
+    z-index: 1;
+    top: 0;
+
     padding: 0 1.75rem;
     background-color: ${({ theme }) => theme.DARK[700]};    
 `
@@ -24,7 +29,6 @@ export const Content = styled.div`
             width: 1.5rem;
         }
     }
-
     
     @media (min-width: ${DEVICE_BREAKPOINTS.MD}) {
         max-width: 71.5rem;

@@ -7,14 +7,16 @@ export const Container = styled.div`
     
     width: 100%;
     min-width: 20rem;
-    height: 100vh;
+    overflow-y: auto;
+    height: calc(100% - 7.5rem); 
     
-    overflow: auto;
-    overflow: overlay; 
+    margin-top: 7rem;
+    margin-bottom: 5rem;
 `
 
 export const Content = styled.div`
     grid-area: content;
+    font-family: 'Poppins', sans-serif;
 
     display: flex;
     flex-direction: column;
@@ -24,7 +26,10 @@ export const Content = styled.div`
     margin: 2rem auto;
     padding: 1rem;
 
-    font-family: 'Poppins', sans-serif;
+    p {
+        font-size: 3.2rem;
+        margin-bottom: 3rem;
+    }
 
     @media (min-width: ${DEVICE_BREAKPOINTS.MD}) {
         max-width: 71.5rem;
@@ -32,9 +37,11 @@ export const Content = styled.div`
 `
 
 export const Banner = styled.div`
+    display: flex;
+    
     padding: 2rem 1rem;
     border-radius: 0.2rem;
-    background: var(--gradients-200, linear-gradient(180deg, #091E26 0%, #00131C 100%));
+    background: ${({ theme }) => theme.GRADIENTS[200]};
     height: 8.5rem;
 
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
@@ -43,8 +50,6 @@ export const Banner = styled.div`
     }
 
     > section {
-        margin-left: 14rem;
-
         > h1 {
             font-size: 1.5rem;
         }
@@ -57,18 +62,15 @@ export const Banner = styled.div`
             > h1 {
                 font-size: 1rem;
             }
-        
             > span {
                 display: none;
             }
         }
 
         @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
-            margin-left: 32rem;
-            margin-top: 60px;
-
             > h1 {
                 font-size: 2.5rem;
+                margin-top: 2.5rem;
             }
         
             > span {
@@ -78,19 +80,18 @@ export const Banner = styled.div`
     }
 
     > img {
-        position: absolute;
-        width: 16rem;
-        left: 0;
-        top: 8.5rem;
+        position: relative;
+        margin-top: -2.5rem;
+        left: -2rem;
         
-        @media (max-width: ${DEVICE_BREAKPOINTS.SM}) {
-            width: 12rem;
-        }
+        width: 11.5rem;
+        height: 9rem;
 
         @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
-            width: 32rem;
-            top: 8rem;
-            left: calc(100% - 71.5rem - 8rem);
+            width: 39rem;
+            height: 25rem;
+            left: -70px;
+            margin-top: -10.5rem;
         }
     }
 `
